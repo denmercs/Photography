@@ -1,0 +1,83 @@
+/******* HEADER *********/
+.header {
+    background-image: url('../img/picture-1.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    position: relative;
+
+    &__logo {
+        width: 10rem;
+        margin-top: $margin-top-huge;
+    }
+
+    .flexbox {
+        @include flexbox;
+    }
+
+    .navbar {
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 4rem;
+        }
+    
+        &__item {
+            list-style: none;
+    
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+    
+        }
+    
+        &__link {
+            font-size: $default-font-size;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: .25rem;
+            color: $secondary-color;
+            transition: all .5s;
+    
+            &:hover,
+            &:active {
+                font-size: 1.4rem;
+                padding: 1rem 2rem;
+                background-color: darken(rgba(67, 103, 178, .7), $amount: 15%);
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        color: $secondary-color;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 15%;
+        
+    }
+
+    &__icon {
+        fill: $secondary-color;
+        text-align: center;
+        margin-top: $margin-top-medium;
+        height: 3.2rem;
+        width: 3.2rem;
+    
+        animation: moveInBottom 2.5s infinite;
+        
+    }
+}
+
+
+
+
