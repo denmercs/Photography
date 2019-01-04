@@ -1,0 +1,31 @@
+.horizontal__line {
+    border:0;
+    border-bottom: $secondary-color solid 2px;
+    height: 2px;
+    width: 20rem;
+}
+
+
+
+.btn--light {
+    @extend %button-style;
+    color: $secondary-color;
+    border: .15em solid  $secondary-color;
+
+    &:hover,
+    &:active {
+        background-color: darken($color: rgba(255, 255, 255, 0.75), $amount: .5);
+        color: $primary-color;
+    }
+}
+
+.btn--dark {
+    @extend %button-style;
+    color: $primary-color;
+    border: .15em solid  $primary-color;
+    &:hover,
+    &:active {
+        background-color: darken($color: rgba(67, 103, 178, 0.75), $amount: .5);
+        color: $secondary-color;
+    }
+}

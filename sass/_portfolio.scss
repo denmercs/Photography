@@ -1,0 +1,38 @@
+.main {
+    background-color: $secondary-color;
+}
+
+.portfolio {
+    padding: $padding-large 0;
+
+    &__intro {
+        text-align: center;
+    }
+
+    p {
+        @include paragraph-content;
+        margin-top: 10rem;
+    }
+
+    &__img {
+        background-image: url('../img/picture-2.jpg');
+        height: calc(100vh - 55.7rem);
+        background-size: cover;
+        position: relative;
+        @include flexbox;
+        justify-content: center;
+        
+    }
+
+    &__block {
+        height: 20rem;
+        @include flexbox;
+        justify-content: space-evenly;
+
+    }
+
+    .horizontal__line {
+        padding-top: 2rem;
+    }
+
+}

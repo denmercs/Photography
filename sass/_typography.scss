@@ -1,0 +1,9 @@
+.heading--large--dark {
+    @extend %header;
+    color: $text-primary-color;
+}
+
+.heading--large--light {
+    @extend %header;
+    color: $text-secondary-color;
+}

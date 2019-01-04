@@ -37,7 +37,7 @@
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: .25rem;
-            color: $secondary-color;
+            color: $text-secondary-color;
             transition: all .5s;
     
             &:hover,
@@ -60,9 +60,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
         position: absolute;
         bottom: 15%;
+        opacity: 20%;
         
     }
 
@@ -73,7 +73,7 @@
         height: 3.2rem;
         width: 3.2rem;
     
-        animation: moveInBottom 2.5s infinite;
+        animation: moveInBottom 2.5s infinite ease-out;
         
     }
 }
