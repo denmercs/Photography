@@ -10,6 +10,15 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin paragraph-content {
+    font-size: $default-font-size;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: .05em;
+    line-height: 2.5em;
+}
+
+
 %header {
     font-size: 4.5rem;
     font-family: 'Tangerine', sans-serif;
@@ -23,10 +32,9 @@
     text-transform: uppercase;
 }
 
-@mixin paragraph-content {
-    font-size: $default-font-size;
-    font-weight: 400;
-    text-align: center;
-    letter-spacing: .05em;
-    line-height: 2.5em;
+
+%text-styles {
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
 }

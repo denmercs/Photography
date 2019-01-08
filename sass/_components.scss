@@ -11,10 +11,11 @@
     @extend %button-style;
     color: $secondary-color;
     border: .15em solid  $secondary-color;
+    transition: all .5s ease-in;
 
     &:hover,
     &:active {
-        background-color: darken($color: rgba(255, 255, 255, 0.75), $amount: .5);
+        background-color: darken($color: rgba(255, 255, 255, 0.85), $amount: .25);
         color: $primary-color;
     }
 }
@@ -23,6 +24,8 @@
     @extend %button-style;
     color: $primary-color;
     border: .15em solid  $primary-color;
+    transition: all .5s ease-in;
+
     &:hover,
     &:active {
         background-color: darken($color: rgba(67, 103, 178, 0.75), $amount: .5);

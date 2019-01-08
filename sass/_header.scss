@@ -67,15 +67,12 @@
     }
 
     &__icon {
+        font-size: 3rem;
         fill: $secondary-color;
         text-align: center;
         margin-top: $margin-top-medium;
-        height: 3.2rem;
-        width: 3.2rem;
-    
         animation: moveInBottom 2.5s infinite ease-out;
-        
-    }
+    } 
 }
 
 

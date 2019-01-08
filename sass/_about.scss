@@ -32,3 +32,64 @@
     }
 
 }
+
+.reviews {
+
+    &__img {
+        background-image: url(../img/picture-4.jpg);
+        background-size: cover;
+        background-position: center;
+        height: calc(100vh - 58rem);
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__intro {
+        margin: 5rem 0;
+    }
+
+    &__block {
+        background-color: rgba(255, 255, 255, .90);
+        padding: 0 2rem;
+
+        @include flexbox;
+
+    
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__client {
+        @include flexbox;
+        padding: 0 2rem;
+        margin-bottom: 5rem;
+    
+        p {
+            @include paragraph-content;
+        }
+        
+        h4 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    &__rate {
+        margin-top: 2rem;
+        color: $primary-color;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+    }
+    
+    &__btn {
+        margin-bottom: 5rem;
+    }
+
+}
+
