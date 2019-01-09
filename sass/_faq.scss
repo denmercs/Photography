@@ -1,36 +1,96 @@
 .faq {
     border-bottom: rgba(206, 206, 206, 0.432) .05px solid;
 
+
+    &__contents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .content__one {
+            flex: 2 0 100%;
+        }
+
+        .content__two {
+            flex: 0 5 2fr;
+
+            @include responsive(medium-screen) {
+                flex: 1 0 100%;   
+                margin: 5rem 2rem;
+            }
+
+            @include responsive(medium-screen) {
+                margin: 2rem 0;
+            }
+    
+            @include responsive(small-screen) {
+                margin: 0;   
+                height: 80vh;
+            }
+        }
+
+        .content__three {
+            flex: 0 0 1fr;
+
+            @include responsive(medium-screen) {
+                flex: 1 0 100%;
+                margin: 5rem 0;
+            }
+        }
+    }
+
     &__intro {
         background-image: linear-gradient( rgba(128, 128, 128, .30), rgba(0, 0, 0, .30)), url("../img/picture-5.jpg");
         background-position: center;
         background-size: cover;
         position: relative;
-        height: 40vh;
-        
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
 
         h4 {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            color: $secondary-color;
+
+            @include responsive(medium-screen) {
+                font-size: 1.5rem;
+            }
+
+            @include responsive(small-screen) {
+                font-size: 1.25rem;
+            }
         }
     }
 
-    &__contents {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+
 
     &__goodnews {
-        width: 60%;
         padding: 0 5rem;
 
         h4 {
             text-align: center;
+
+            @include responsive(small-screen) {
+                font-size: 3rem;
+            }
+            
+        }
+
+        @include responsive(medium-screen) {
+            margin: 2rem 0;
+        }
+
+        @include responsive(small-screen) {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
         }
     }
 
@@ -53,6 +113,11 @@
         line-height: 20px;
         border-radius: 50%;
         transform: translateY(-.75rem);
+
+        @include responsive(small-screen) {
+            margin: 1rem;
+            word-wrap: wrap;
+        }
     }
 
     &__content {
@@ -77,6 +142,12 @@
         
         h3 {
             padding: 2rem 0;
+
+            @include responsive(small-screen) {
+                font-size: 3rem;
+                padding: 0;
+                margin-bottom: 1rem;
+            }
         }
 
         p {
@@ -86,11 +157,29 @@
             :last-of-type {
                 margin-bottom: 5rem;
             }
+
+            @include responsive(small-screen) {
+                font-size: 1rem;
+            }
         }
 
         button {
             margin-top: 3rem;
+
+            @include responsive(medium-screen) {
+                font-size: 1rem;
+            }
+
+            @include responsive(small-screen) {
+                margin-top: 1rem;
+            }
+        }
+
+        @include responsive(medium-screen) {
+            height: 30vh;
+        }
+        @include responsive(small-screen) {
+            height: 20vh;
         }
     }
 }
-

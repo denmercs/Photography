@@ -6,6 +6,12 @@
     height: 100vh;
     position: relative;
 
+    @include responsive(small-screen) {
+        height: 100vh;
+    }
+
+
+
     &__logo {
         width: 10rem;
         margin-top: $margin-top-huge;
@@ -21,6 +27,17 @@
             flex-direction: row;
             justify-content: center;
             margin-top: 4rem;
+
+            @include responsive(medium-screen) {
+                margin-top: 2rem;
+            }
+
+            @include responsive(small-screen) {
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+                height: 20vh;
+            }
         }
     
         &__item {
@@ -28,8 +45,14 @@
     
             &:not(:last-child) {
                 margin-right: 3rem;
+            }   
+
+            @include responsive(small-screen) {
+                align-self: center;
+                &:not(:last-child) {
+                    margin: 0;
+                }
             }
-    
         }
     
         &__link {
@@ -39,12 +62,25 @@
             letter-spacing: .25rem;
             color: $text-secondary-color;
             transition: all .5s;
+
+            @include responsive(medium-screen) {
+                font-size: $medium-font-size;
+            }
+
+            @include responsive(small-screen) {
+                padding: 1rem;
+            }
     
             &:hover,
             &:active {
                 font-size: 1.4rem;
                 padding: 1rem 2rem;
                 background-color: darken(rgba(67, 103, 178, .7), $amount: 15%);
+
+                @include responsive(medium-screen) {
+                    font-size: 1.25rem;
+                    padding: .5rem 1rem;
+                }
             }
         }
     }
@@ -54,7 +90,7 @@
         color: $secondary-color;
         text-align: center;
         text-transform: uppercase;
-        font-size: 1;
+        font-size: 1.5rem;
         
         display: flex;
         flex-direction: column;
@@ -63,6 +99,10 @@
         position: absolute;
         bottom: 15%;
         opacity: 20%;
+
+        @include responsive(medium-screen) {
+            font-size: 1rem;
+        }
         
     }
 
@@ -72,6 +112,10 @@
         text-align: center;
         margin-top: $margin-top-medium;
         animation: moveInBottom 2.5s infinite ease-out;
+
+        @include responsive(medium-screen) {
+            font-size: 1.5rem;
+        }
     } 
 }
 

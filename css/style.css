@@ -99,22 +99,64 @@ body {
 
 .portfolio {
   padding: 15rem 0;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1200px) {
+  .portfolio {
+    max-height: 30vh;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .portfolio {
+    height: 30vh;
+  }
 }
 .portfolio__intro {
   text-align: center;
 }
+@media only screen and (max-width: 1200px) {
+  .portfolio__intro {
+    margin: .5rem 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .portfolio__intro {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .portfolio__intro {
+    font-size: 3rem;
+  }
+}
 .portfolio p {
+  margin-top: 5rem;
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   letter-spacing: .05em;
   line-height: 2.5em;
-  margin-top: 10rem;
+}
+@media only screen and (max-width: 1200px) {
+  .portfolio p {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .portfolio p {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
 }
 .portfolio__img {
   background-image: url("../img/picture-2.jpg");
-  height: calc(100vh - 55.7rem);
+  height: 60vh;
   background-size: cover;
+  background-position: center;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -122,16 +164,34 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 1200px) {
+  .portfolio__img {
+    height: 70vh;
+    background-position: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .portfolio__img h3 {
+    font-size: 3rem;
+  }
+}
 .portfolio__block {
-  height: 20rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.portfolio .horizontal__line {
+.portfolio__block .horizontal__line {
   padding-top: 2rem;
+}
+.portfolio__block button {
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .portfolio__block button {
+    font-size: 1rem;
+  }
 }
 
 /******* HEADER *********/
@@ -141,6 +201,11 @@ body {
   background-position: bottom;
   height: 100vh;
   position: relative;
+}
+@media only screen and (max-width: 500px) {
+  .header {
+    height: 100vh;
+  }
 }
 .header__logo {
   width: 10rem;
@@ -158,11 +223,32 @@ body {
   justify-content: center;
   margin-top: 4rem;
 }
+@media only screen and (max-width: 800px) {
+  .header .navbar__list {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header .navbar__list {
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+  }
+}
 .header .navbar__item {
   list-style: none;
 }
 .header .navbar__item:not(:last-child) {
   margin-right: 3rem;
+}
+@media only screen and (max-width: 500px) {
+  .header .navbar__item {
+    align-self: center;
+  }
+  .header .navbar__item:not(:last-child) {
+    margin: 0;
+  }
 }
 .header .navbar__link {
   font-size: 1.5rem;
@@ -172,17 +258,33 @@ body {
   color: #FAFAFA;
   transition: all .5s;
 }
+@media only screen and (max-width: 800px) {
+  .header .navbar__link {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header .navbar__link {
+    padding: 1rem;
+  }
+}
 .header .navbar__link:hover, .header .navbar__link:active {
   font-size: 1.4rem;
   padding: 1rem 2rem;
   background-color: rgba(46, 71, 122, 0.7);
+}
+@media only screen and (max-width: 800px) {
+  .header .navbar__link:hover, .header .navbar__link:active {
+    font-size: 1.25rem;
+    padding: .5rem 1rem;
+  }
 }
 .header__content {
   width: 100%;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,12 +293,22 @@ body {
   bottom: 15%;
   opacity: 20%;
 }
+@media only screen and (max-width: 800px) {
+  .header__content {
+    font-size: 1rem;
+  }
+}
 .header__icon {
   font-size: 3rem;
   fill: #fff;
   text-align: center;
   margin-top: 3rem;
   animation: moveInBottom 2.5s infinite ease-out;
+}
+@media only screen and (max-width: 800px) {
+  .header__icon {
+    font-size: 1.5rem;
+  }
 }
 
 .about {
@@ -207,6 +319,17 @@ body {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  height: 40vh;
+}
+@media only screen and (max-width: 1200px) {
+  .about {
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about {
+    height: 40vh;
+  }
 }
 .about__img {
   background-image: url(../img/picture-3.jpg);
@@ -214,6 +337,11 @@ body {
   width: 150rem;
   background-size: cover;
   background-position: center;
+}
+@media only screen and (max-width: 500px) {
+  .about__img {
+    display: none;
+  }
 }
 .about__content {
   height: 30rem;
@@ -225,6 +353,17 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 500px) {
+  .about__content {
+    justify-content: space-evenly;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .about__content h3 {
+    font-size: 3rem;
+  }
+}
 .about__content p {
   font-size: 1.5rem;
   font-weight: 400;
@@ -232,33 +371,71 @@ body {
   letter-spacing: .05em;
   line-height: 2.5em;
 }
+@media only screen and (max-width: 800px) {
+  .about__content p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .about__content button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
 .about__heading {
   text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .about__heading {
+    font-size: 5rem;
+  }
 }
 
 .reviews__img {
   background-image: url(../img/picture-4.jpg);
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 58rem);
+  height: 60vh;
   width: 100%;
   display: flex;
   align-items: center;
 }
 .reviews__intro {
-  margin: 5rem 0;
+  margin: 2rem 0;
+}
+@media only screen and (max-width: 1200px) {
+  .reviews__intro {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .reviews__intro {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .reviews__intro {
+    font-size: 3rem;
+  }
 }
 .reviews__block {
   background-color: rgba(255, 255, 255, 0.9);
+  height: 85%;
   padding: 0 2rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 1200px) {
+  .reviews__block {
+    height: 90%;
+  }
+}
 .reviews__content {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .reviews__client {
   display: flex;
@@ -266,7 +443,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .reviews__client p {
   font-size: 1.5rem;
@@ -275,49 +452,150 @@ body {
   letter-spacing: .05em;
   line-height: 2.5em;
 }
+@media only screen and (max-width: 800px) {
+  .reviews__client p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .reviews__client p {
+    font-size: 1rem;
+  }
+}
 .reviews__client h4 {
   text-transform: uppercase;
   text-align: center;
 }
+@media only screen and (max-width: 500px) {
+  .reviews__client h4 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .reviews__client {
+    margin: 0;
+  }
+}
 .reviews__rate {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #4367B2;
   padding: 1.5rem 2rem;
   font-size: 1.5rem;
 }
+@media only screen and (max-width: 1200px) {
+  .reviews__rate {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .reviews__rate {
+    font-size: 1rem;
+  }
+}
 .reviews__btn {
   margin-bottom: 5rem;
+}
+@media only screen and (max-width: 1200px) {
+  .reviews__btn {
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .reviews__btn {
+    font-size: 1rem;
+  }
 }
 
 .faq {
   border-bottom: rgba(206, 206, 206, 0.432) 0.05px solid;
+}
+.faq__contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.faq__contents .content__one {
+  flex: 2 0 100%;
+}
+.faq__contents .content__two {
+  flex: 0 5 2fr;
+}
+@media only screen and (max-width: 800px) {
+  .faq__contents .content__two {
+    flex: 1 0 100%;
+    margin: 5rem 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .faq__contents .content__two {
+    margin: 2rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .faq__contents .content__two {
+    margin: 0;
+    height: 80vh;
+  }
+}
+.faq__contents .content__three {
+  flex: 0 0 1fr;
+}
+@media only screen and (max-width: 800px) {
+  .faq__contents .content__three {
+    flex: 1 0 100%;
+    margin: 5rem 0;
+  }
 }
 .faq__intro {
   background-image: linear-gradient(rgba(128, 128, 128, 0.3), rgba(0, 0, 0, 0.3)), url("../img/picture-5.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
-  height: 40vh;
-}
-.faq__intro h4 {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.faq__contents {
+  height: 20vh;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+.faq__intro h4 {
+  color: #fff;
+}
+@media only screen and (max-width: 800px) {
+  .faq__intro h4 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .faq__intro h4 {
+    font-size: 1.25rem;
+  }
 }
 .faq__goodnews {
-  width: 60%;
   padding: 0 5rem;
 }
 .faq__goodnews h4 {
   text-align: center;
+}
+@media only screen and (max-width: 500px) {
+  .faq__goodnews h4 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .faq__goodnews {
+    margin: 2rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .faq__goodnews {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .faq__info {
   display: flex;
@@ -336,6 +614,12 @@ body {
   line-height: 20px;
   border-radius: 50%;
   transform: translateY(-0.75rem);
+}
+@media only screen and (max-width: 500px) {
+  .faq__number {
+    margin: 1rem;
+    word-wrap: wrap;
+  }
 }
 .faq__content p {
   margin-top: 1rem;
@@ -356,6 +640,13 @@ body {
 .faq__main h3 {
   padding: 2rem 0;
 }
+@media only screen and (max-width: 500px) {
+  .faq__main h3 {
+    font-size: 3rem;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+}
 .faq__main p {
   font-size: 1.25rem;
   color: #fff;
@@ -363,44 +654,79 @@ body {
 .faq__main p :last-of-type {
   margin-bottom: 5rem;
 }
+@media only screen and (max-width: 500px) {
+  .faq__main p {
+    font-size: 1rem;
+  }
+}
 .faq__main button {
   margin-top: 3rem;
 }
+@media only screen and (max-width: 800px) {
+  .faq__main button {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .faq__main button {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .faq__main {
+    height: 30vh;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .faq__main {
+    height: 20vh;
+  }
+}
 
 .pricing {
-  height: 70vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 500px) {
+  .pricing {
+    height: 100vh;
+  }
+}
 .pricing__heading {
   text-align: center;
-  margin: 5rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 500px) {
+  .pricing__heading {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+  }
 }
 .pricing__contents {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 500px) {
+  .pricing__contents {
+    flex-direction: column;
+    align-self: center;
+    margin: 0;
+  }
 }
 .pricing__item {
   align-content: space-between;
   text-align: center;
-  padding: 5rem;
+  padding: 3rem;
   margin: 0 2.5rem;
   -webkit-box-shadow: 3px 8px 16px -4px #d4d4d4;
   -moz-box-shadow: 3px 8px 16px -4px #d4d4d4;
   box-shadow: 3px 8px 16px -4px #d4d4d4;
   transition: all .2s;
-}
-.pricing__item:hover, .pricing__item:active {
-  -webkit-box-shadow: 3px 8px 16px -4px #4366b2;
-  -moz-box-shadow: 3px 8px 16px -4px #4366b2;
-  box-shadow: 3px 8px 16px -4px #4366b2;
-  transform: scale(1.2);
-}
-.pricing__item h4 {
-  font-size: 1.5rem;
 }
 .pricing__item h5 {
   display: block;
@@ -408,15 +734,63 @@ body {
   font-size: 1.5rem;
   word-spacing: 5rem;
 }
+@media only screen and (max-width: 500px) {
+  .pricing__item h5 {
+    margin-top: .25em;
+    font-size: 1rem;
+  }
+}
+.pricing__item h4 {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 500px) {
+  .pricing__item h4 {
+    font-size: 1rem;
+  }
+}
 .pricing__item p {
   font-size: 1.25rem;
 }
+@media only screen and (max-width: 500px) {
+  .pricing__item p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .pricing__item {
+    width: 30rem;
+    margin: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .pricing__item {
+    width: 30rem;
+    padding: .85rem 0;
+  }
+}
+.pricing__item:hover, .pricing__item:active {
+  -webkit-box-shadow: 3px 8px 16px -4px #4366b2;
+  -moz-box-shadow: 3px 8px 16px -4px #4366b2;
+  box-shadow: 3px 8px 16px -4px #4366b2;
+  transform: scale(1.1);
+}
+.pricing__item:hover h4, .pricing__item:active h4 {
+  color: #4367B2;
+}
+.pricing__item:hover h5, .pricing__item:active h5 {
+  color: #4367B2;
+}
 .pricing button {
-  margin-top: 5rem;
+  margin-top: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .pricing button {
+    font-size: 1rem;
+  }
 }
 
 .blog {
-  height: 25vh;
+  height: 20vh;
   background-image: url(../img/picture-7.jpg);
   background-size: cover;
   background-position: center;
@@ -425,7 +799,6 @@ body {
   align-items: center;
 }
 .blog__block {
-  height: 20rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -433,14 +806,25 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-.blog .horizontal__line {
+.blog__block .horizontal__line {
   padding-top: 2rem;
+}
+.blog__block button {
+  margin-top: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .blog__block button {
+    font-size: 1rem;
+  }
 }
 
 footer {
   height: 5vh;
   text-align: center;
   background-color: #4367B2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer h2 {
   color: #fff;
@@ -448,7 +832,6 @@ footer h2 {
   font-size: 1rem;
   letter-spacing: .5em;
   text-transform: uppercase;
-  padding-top: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,27 +1,43 @@
 .pricing {
-    height: 70vh;
+    height: 85vh;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    @include responsive(small-screen) {
+        height: 100vh;
+    }
+
     &__heading {
         text-align: center;
-        margin: 5rem;
+        margin-bottom: 2rem;
+
+        @include responsive(small-screen) {
+            font-size: 3rem;
+            margin: 1.5rem 0;
+        }
     }
 
     &__contents {
         display: flex;
         justify-content: space-around;
         align-items: stretch;
+        margin-bottom: 2rem;
+
+        @include responsive(small-screen) {
+            flex-direction: column;
+            align-self: center;
+            margin: 0;
+        }
 
     }
 
     &__item {
         align-content: space-between;
         text-align: center;
-        padding: 5rem;
+        padding: 3rem;
         margin: 0 2.5rem;
         
         -webkit-box-shadow: 3px 8px 16px -4px rgba(212,212,212,1);
@@ -29,39 +45,77 @@
         box-shadow: 3px 8px 16px -4px rgba(212,212,212,1);
         transition: all .2s;
 
-        &:hover, 
-        &:active {
-            -webkit-box-shadow: 3px 8px 16px -4px rgba(67,102,178,1);
-            -moz-box-shadow: 3px 8px 16px -4px rgba(67,102,178,1);
-            box-shadow: 3px 8px 16px -4px rgba(67,102,178,1);
-            transform: scale(1.2);
-        }
-
-
-        h4 {
-            font-size: 1.5rem;
-        }
 
         h5 {
             display: block;
             margin: 1.5rem 0;
             font-size: 1.5rem;
             word-spacing: 5rem;
+
+            @include responsive(small-screen) {
+                margin-top: .25em;
+                font-size: 1rem;
+            }
         }
+
+        h4 {
+            font-size: 1.5rem;
+            
+            @include responsive(small-screen) {
+                font-size: 1rem;
+            }
+        }
+
 
         p {
             font-size: 1.25rem;
+
+            @include responsive(small-screen) {
+                font-size: 1rem;
+            }
         }
+
+        @include responsive(medium-screen) {
+            width: 30rem;
+            margin: 1rem;
+        }
+
+        @include responsive(small-screen) {
+            width: 30rem;
+            padding: .85rem 0;
+        }
+
+        &:hover, 
+        &:active {
+            -webkit-box-shadow: 3px 8px 16px -4px rgba(67,102,178,1);
+            -moz-box-shadow: 3px 8px 16px -4px rgba(67,102,178,1);
+            box-shadow: 3px 8px 16px -4px rgba(67,102,178,1);
+            transform: scale(1.1);   
+            
+            h4 {
+                color: $primary-color;
+            }
+
+            h5 {
+                color: $primary-color;
+            }
+        }
+
+
+   
     }
 
     button {
-            
-        margin-top: 5rem;
+        margin-top: 1.5rem;
+
+        @include responsive(medium-screen) {
+            font-size: 1rem;
+        }
     }
 }
 
 .blog {
-    height: 25vh;
+    height: 20vh;
     background-image: url(../img/picture-7.jpg);
     background-size: cover;
     background-position: center;
@@ -71,15 +125,21 @@
     align-items: center;
 
     &__block {
-        height: 20rem;
         @include flexbox;
         justify-content: space-evenly;
         align-items: center;
 
-    }
+        .horizontal__line {
+            padding-top: 2rem;
+        }
 
-    .horizontal__line {
-        padding-top: 2rem;
+        button {
+            margin-top: 1.5rem;
+
+            @include responsive(medium-screen) {
+                font-size: 1rem;
+            }
+        }
     }
 }
 
@@ -87,6 +147,10 @@ footer {
     height: 5vh;
     text-align: center;
     background-color: $primary-color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     h2 {
         color: $secondary-color;
@@ -94,6 +158,6 @@ footer {
         font-size: 1rem;
         letter-spacing: .5em;
         text-transform: uppercase;
-        padding-top: 2.5rem;
     }
+
 }

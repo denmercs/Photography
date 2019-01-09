@@ -4,34 +4,92 @@
 
 .portfolio {
     padding: $padding-large 0;
+    height: 40vh;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    @include responsive(wide-screen) {
+        max-height: 30vh;
+        
+    }
+
+    @include responsive(medium-screen) {
+        height: 30vh;
+    }
 
     &__intro {
         text-align: center;
+
+        @include responsive(wide-screen) {
+            margin: .5rem 0;
+        }
+
+        @include responsive(medium-screen) {
+            font-size: 4rem;
+        }
+
+        @include responsive(small-screen) {
+            font-size: 3rem;
+        }
+
     }
 
     p {
+        margin-top: 5rem;
+
         @include paragraph-content;
-        margin-top: 10rem;
+
+        @include responsive(wide-screen) {
+            margin-top: 1rem;
+        }
+
+        @include responsive(medium-screen) {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+
+        
     }
 
     &__img {
         background-image: url('../img/picture-2.jpg');
-        height: calc(100vh - 55.7rem);
+        height: 60vh;
         background-size: cover;
+        background-position: center;
         position: relative;
         @include flexbox;
         justify-content: center;
+
+        @include responsive(wide-screen) {
+            height: 70vh;
+            background-position: center;
+        }
+
+        h3 {
+            @include responsive(small-screen) {
+                font-size: 3rem;
+            }
+        }
         
     }
 
     &__block {
-        height: 20rem;
         @include flexbox;
         justify-content: space-evenly;
 
-    }
 
-    .horizontal__line {
-        padding-top: 2rem;
+        .horizontal__line {
+            padding-top: 2rem;
+        }
+    
+        button {
+            margin-top: 2rem;
+
+            @include responsive(medium-screen) {
+                font-size: 1rem;
+            }
+        }     
     }
 }
